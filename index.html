@@ -3,6 +3,7 @@
   <title>Calculator</title>
   <meta charset="utf-8">
   <link rel= 'stylesheet' href="css/style.css">
+  <script src="js/jquery.js"></script>
 </head>
 <body>
   
@@ -19,29 +20,29 @@
   <button id = "plusminus" class="keys">+/-</button>
   <button id = "percent" class="keys"  >%</button>
 </div>
-<div id="row2">
-  <button onclick="" id = "seven" class= "keys" value= "7" on>7</button>
-  <button onclick="" id = "eight" class= "keys" value= "8">8</button> 
-  <button onclick="" id = "nine" class= "keys" value= "9">9</button>
-  <button onclick="calculator.add()" id = "plus" class= "keys">+</button>
+<div class="commonRows">
+  <button id = "seven" class= "keys" value= "7">7</button>
+  <button id = "eight" class= "keys" value= "8">8</button> 
+  <button id = "nine" class= "keys" value= "9">9</button>
+  <button id = "add" class= "keys">+</button>
 </div>
-  <div id="row3">
-  <button onclick="" id = "four" class= "keys" value= "4">4</button>
-  <button onclick="" id = "five" class= "keys" value= "5">5</button>
-  <button onclick="" id = "six" class= "keys" value= "6">6</button>
-  <button onclick="" id = "minus" class= "keys">-</button>
+  <div class="commonRows">
+  <button id = "four" class= "keys" value= "4">4</button>
+  <button id = "five" class= "keys" value= "5">5</button>
+  <button id = "six" class= "keys" value= "6">6</button>
+  <button id = "subtract" class= "keys">-</button>
 </div>
-   <div id="row4">
-     <button onclick="" id = "one" class= "keys" value= "1">1</button>
-     <button onclick="" id = "two" class= "keys" value= "2">2</button>
-     <button onclick="" id = "three" class= "keys" value= "3">3</button>
-     <button onclick="" id = "multiply" class= "keys">X</button>
+   <div class="commonRows">
+     <button id = "one" class= "keys" value= "1">1</button>
+     <button id = "two" class= "keys" value= "2">2</button>
+     <button id = "three" class= "keys" value= "3">3</button>
+     <button id = "multiply" class= "keys">X</button>
 </div>
-  <div id="row5">
-  <button onclick="" id  = "zero" class= "keys" value="0">0</button>
-  <button onclick="" id = "dot" class= "keys" >.</button>
-  <button onclick="calculator.equals()" id = "equal" class= "keys">=</button>
-  <button onclick="" id = "divide" class= "keys">/</button>
+  <div class="commonRows">
+  <button id  = "zero" class= "keys" value="0">0</button>
+  <button id = "dot" class= "keys" >.</button>
+  <button id = "equal" class= "keys">=</button>
+  <button id = "divide" class= "keys">/</button>
 
       
 </div>
@@ -54,8 +55,8 @@
     
 
   
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="ui.js"></script>
+  <script src="js/calculator.js"></script>
+  
   
 
       

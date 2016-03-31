@@ -1,0 +1,118 @@
+$commonBorder: #979797 2px solid;
+$radius: 10px;
+$background: #D8D8D8;
+$font-size: 24px;
+$keys-border: 1px solid #979797;
+
+
+@mixin common($width, $height, $margin) {
+	width: $width;
+	height: $height;
+	margin: $margin;
+}
+
+@mixin keys {
+  background: $background;
+  border: $keys-border;
+  margin-left: 4px;
+  @include font(24px);
+
+}
+
+@mixin clear {
+	@include keys;
+	@include common(95px, 39px, null); 
+	}
+		
+
+
+@mixin border($border) {
+	border: $border;
+}
+
+@mixin font($font-size) {
+	font-size: $font-size;
+	font-family: Eurostile;
+}
+
+@mixin shadow($shadow) {
+	box-shadow: $shadow;
+}
+
+@mixin background($background) {
+	background: $background
+}
+
+@mixin row($width, $margin-left) {
+	width: $width;
+	margin-left: $margin-left;
+}
+
+#desk {
+	@include common(1000px, 410px, 60px auto);
+	background-image: url('../img/wood.jpg');
+	@include border(solid #000000 8px);
+	@include shadow(6px 6px 2px #000);
+	border-radius: $radius;
+
+}
+
+	#calculator {
+	@include background(linear-gradient(#FFA5A5, #FFFFFF));
+	@include common(222px, 299px, 90px auto);
+	@include shadow(7px 5px 4px #000000);
+	border-radius: $radius;
+	@include border($commonBorder);
+
+}
+
+	#display {
+	@include common(197px, 51px, $radius);
+	opacity: 0.67;
+	@include background($background);
+	@include border($commonBorder);
+	@include shadow(1px 1px 1px #000000);
+	@include shadow(inset 1px 1px 4px #000000);
+	@include font(40px);
+
+}
+
+	#contain {
+		@include common(156px, 195px, 15px);
+	}
+
+	#row1 {
+		@include row(194px, 1px);
+	}
+
+	.commonRows {
+		@include row(195px, 5px);
+	}
+
+	.keys {
+	@include keys;
+	@include common(47.75px, 39px, null);
+	}
+
+	  #clear { 
+	  @include clear;
+
+	  }
+
+
+#Notebook {
+  float: right;
+  margin-top: 260px;
+  margin-right: 150px;
+}
+
+#Note {
+  height: 135.5px;
+  width: 156.5px;
+ }
+
+
+
+
+
+
