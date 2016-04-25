@@ -14,14 +14,15 @@ $keys-border: 1px solid #979797;
 @mixin keys {
   background: $background;
   border: $keys-border;
-  margin-left: 4px;
+  margin-left: -4px;
   @include font(24px);
 
 }
 
 @mixin clear {
 	@include keys;
-	@include common(95px, 39px, null); 
+	@include common(96px, 39px, null); 
+	margin-left: 1px;
 	}
 		
 
@@ -73,7 +74,7 @@ $keys-border: 1px solid #979797;
 	@include border($commonBorder);
 	@include shadow(1px 1px 1px #000000);
 	@include shadow(inset 1px 1px 4px #000000);
-	@include font(40px);
+	@include font(20px);
 
 }
 
@@ -82,7 +83,7 @@ $keys-border: 1px solid #979797;
 	}
 
 	#row1 {
-		@include row(194px, 1px);
+		@include row(194px, 0 0 0 1px);
 	}
 
 	.commonRows {
@@ -91,7 +92,7 @@ $keys-border: 1px solid #979797;
 
 	.keys {
 	@include keys;
-	@include common(47.75px, 39px, null);
+	@include common(47.95px, 39px, null);
 	}
 
 	  #clear { 
@@ -111,7 +112,9 @@ $keys-border: 1px solid #979797;
   width: 156.5px;
  }
 
-
+button {
+	outline: none;
+}
 
 
 

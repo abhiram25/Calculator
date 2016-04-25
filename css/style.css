@@ -25,7 +25,7 @@
   border: #979797 2px solid;
   box-shadow: 1px 1px 1px #000000;
   box-shadow: inset 1px 1px 4px #000000;
-  font-size: 40px;
+  font-size: 20px;
   font-family: Eurostile; }
 
 #contain {
@@ -35,7 +35,7 @@
 
 #row1 {
   width: 194px;
-  margin-left: 1px; }
+  margin-left: 0 0 0 1px; }
 
 .commonRows {
   width: 195px;
@@ -47,16 +47,18 @@
   margin-left: -4px;
   font-size: 24px;
   font-family: Eurostile;
-  width: 47.75px;
+  width: 47.95px;
   height: 39px; }
 
 #clear {
   background: #D8D8D8;
   border: 1px solid #979797;
+  margin-left: -4px;
   font-size: 24px;
   font-family: Eurostile;
-  width: 95px;
-  height: 39px; }
+  width: 96px;
+  height: 39px;
+  margin-left: 1px; }
 
 #Notebook {
   float: right;
@@ -66,5 +68,8 @@
 #Note {
   height: 135.5px;
   width: 156.5px; }
+
+button {
+  outline: none; }
 
 /*# sourceMappingURL=style.css.map */
