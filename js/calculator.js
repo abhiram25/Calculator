@@ -1,95 +1,164 @@
-var value = [0];
-var result = 0;	
+var result = 0;
 
-var answer = [];
+var temp = 0;
 
-var number = parseFloat(value.join(""));
+var addClicked = false;
 
+var SubtractClicked = false;
+
+var MultiplyClicked = false;
+
+var DivideClicked = false;
+
+var decimalClick = false;
+
+var numberClick = false;
+
+
+var n=0;
 
 $(".number").click(function() {
-	result = 0;
-	$("#display").text(result);
 	$("#clear").text("C");
-	var digit = $(this).val();
-	value.push(digit);
-	var number = parseFloat(value.join(""));
-	console.log(number);
-	value.join("");
-	console.log(value);
-	$("#display").text(number);
+	if (decimalClick===false) {
+	temp = (temp * 10);
+	temp += parseFloat($(this).val());
+	console.log(temp);
+	$("#display").text(temp);
+} else {
+	console.log(n);
+	console.log(decimalClick);
+	if (numberClick = true) {
+	n++;
+}
+	temp += ($(this).val()/Math.pow(10,n));
+	console.log(result);
+	console.log(temp);
+	$("#display").text(temp);
+}
+
 });
 
 $("#clear").click(function() {
 	$("#clear").text("AC");
+	temp = 0;
 	result = 0;
-	value = [];
-	answer = []
-	$("#display").text(result);
+	decimalClick = false;
+	DivideClicked = false;
+	SubtractClicked = false;
+	addClicked = false;
+	MultiplyClicked = false;
+	numberClick = false;
+	$("#display").text(temp);
 });
 
 $("#dot").click(function() {
-	value.push($("#dot").val());
-	var number = parseFloat(value.join(""));
-	$("#display").append(".");
-	console.log(number);
-
-		if (value.prototype.Contains(".")) {
-			alert("decimal present");
-		}
+	$("#clear").text("C");
+	$("#display").text(temp + ".");
+	decimalClick = true;
 });
 
 $("#percent").click(function() {
-	var number = parseFloat(value.join(""));
-	value = [];
-	number /= 100;
-	console.log(number);
-	value.push(number);
-	console.log(value);
-	$("#display").text(value);
+	if (result===0) {
+		result = temp;
+		result/=100;
+		$("#display").text(result);
+		console.log(result);
+	} else {
+		result/=100;
+	}
+	console.log(result);
+	$("#display").text(result);
+	result = 0;
 });
 
 $("#plusminus").click(function() {
-	var number = parseFloat(value.join(""));
-	value = [];
-	number -= (number*2);
-	console.log(number);
-	value.push(number);
-	console.log(value);
-	$("#display").text(value);
+	temp+= -(temp*2);
+	console.log(temp);
+	$("#display").text(temp);
 });
 
 
 $("#equal").click(function() {
-	answer.push(number);
-	var number = parseFloat(value.join(""));
-	console.log(number);
-	result += number;
+	if (addClicked===true) {
+		result += temp;
+	}
+	if (MultiplyClicked === true) {
+		result *= temp;
+	}
+	if (DivideClicked === true) {
+		result /= temp;
+	}
+	if (SubtractClicked === true) {
+		result -= temp;
+	}
 	console.log(result);
 	$("#display").text(result);
-	answer = [];
-	answer.push(result);
-	console.log(parseFloat(answer.join("")));
-	value = [];
  });
 
 
 // operations
 
 $("#add").click(function() {
-	var number = parseFloat(value.join(""));
-	console.log(number);
-	value = [];
-	answer.push(number);
-	console.log(answer);
-	var result = answer[0];
+	addClicked = true;
+	decimalClick = false;
+	console.log(n);
+	n = 0;
+	console.log(n);
+	result += temp;
 	console.log(result);
-
-	for (var i = 1; i < answer.length; i++) {
-		result += answer[i];
-	}
-	console.log(result);
+	temp=0;
 	$("#display").text(result);
-
 });
+
+$("#subtract").click(function() {
+	SubtractClicked = true;
+	decimalClick = false;
+
+	if (result===0) {
+	result -= -(temp);
+	temp = 0;
+}
+	 
+	 if (result!==0) {
+	 	result -= temp;
+	 	console.log(temp);
+	 	console.log(result);
+	 	$("#display").text(result);
+	 	temp = 0;
+	 }
+});
+
+$("#multiply").click(function() {
+	MultiplyClicked = true;
+	decimalClick = false;
+	if (result===0) {
+	result += temp;
+	temp = 0;
+	} else {
+		result*=temp;
+		$("#display").text(result);
+	}
+
+	console.log(result);
+	temp = 0;
+});
+
+$("#divide").click(function() {
+	DivideClicked = true;
+	decimalClick = false;
+
+	if (result===0) {
+	result += temp;
+	temp = 0;
+	} else {
+		result/=temp;
+		$("#display").text(result);
+	}
+
+
+	console.log(result);
+	temp = 0;
+
+	});
 
 
