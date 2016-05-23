@@ -37,7 +37,6 @@ $(".number").click(function() {
 
 
 	temp += ($(this).val()/Math.pow(10,n));
-	console.log(result);
 	console.log(temp);
 	$("#display").text(temp);
 }
@@ -58,10 +57,13 @@ $("#clear").click(function() {
 });
 
 $("#dot").click(function() {
-	$("#display").text(temp + ".");
+	$("#display").text("" + temp + ".");
 	console.log(parseFloat(temp));
 	decimalClick = true;
+ 	
+ 	$("#zero").on("click", function() {
 
+ 	});
 });
 
 $("#percent").click(function() {
@@ -79,12 +81,15 @@ $("#plusminus").click(function() {
 
 
 $("#equal").click(function() {
+	if (MultiplyClicked === true) {
+		result *= temp;
+		console.log(result);
+	}
 	if (addClicked===true) {
 		result += temp;
 	}
-	if (MultiplyClicked === true) {
-		result *= temp;
-	}
+
+
 	if (DivideClicked === true) {
 		result /= temp;
 	}
