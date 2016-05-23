@@ -14,6 +14,10 @@ var decimalClick = false;
 
 var numberClick = false;
 
+var firstNumber= 0;
+
+var zeroClicked = false;
+
 
 var n=0;
 
@@ -30,6 +34,8 @@ $(".number").click(function() {
 	if (numberClick = true) {
 	n++;
 }
+
+
 	temp += ($(this).val()/Math.pow(10,n));
 	console.log(result);
 	console.log(temp);
@@ -52,23 +58,17 @@ $("#clear").click(function() {
 });
 
 $("#dot").click(function() {
-	$("#clear").text("C");
 	$("#display").text(temp + ".");
+	console.log(parseFloat(temp));
 	decimalClick = true;
+
 });
 
 $("#percent").click(function() {
-	if (result===0) {
-		result = temp;
-		result/=100;
-		$("#display").text(result);
-		console.log(result);
-	} else {
-		result/=100;
-	}
-	console.log(result);
-	$("#display").text(result);
-	result = 0;
+	percentClick = true;
+	temp/=100;
+	console.log(temp);
+	$("#display").text(temp);
 });
 
 $("#plusminus").click(function() {
@@ -93,6 +93,15 @@ $("#equal").click(function() {
 	}
 	console.log(result);
 	$("#display").text(result);
+	console.log(result);
+	temp = result;
+	result = 0;
+	addClicked = false;
+	NumberClicked = false;
+	MultiplyClicked = false;
+	DivideClicked = false;
+	SubtractClicked = false;
+	decimalClick = false;
  });
 
 
@@ -115,17 +124,15 @@ $("#subtract").click(function() {
 	decimalClick = false;
 
 	if (result===0) {
-	result -= -(temp);
-	temp = 0;
-}
-	 
-	 if (result!==0) {
-	 	result -= temp;
-	 	console.log(temp);
-	 	console.log(result);
-	 	$("#display").text(result);
-	 	temp = 0;
-	 }
+		firstNumber += temp;
+		result = firstNumber;
+		firstNumber = 0;
+		temp = 0;
+	}
+
+	result -= temp;
+	$("#display").text(result);
+	console.log(result);
 });
 
 $("#multiply").click(function() {
@@ -138,6 +145,8 @@ $("#multiply").click(function() {
 		result*=temp;
 		$("#display").text(result);
 	}
+
+
 
 	console.log(result);
 	temp = 0;
