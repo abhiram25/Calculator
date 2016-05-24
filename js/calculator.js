@@ -16,9 +16,6 @@ var numberClick = false;
 
 var firstNumber= 0;
 
-var zero = 0;
-
-
 var n=0;
 
 $(".number").click(function() {
@@ -57,23 +54,14 @@ $("#clear").click(function() {
 	$("#display").text(temp);
 });
 
+//Display a zero every time it is clicked, while decimalClick is true.
+
 $("#dot").click(function() {
 	$("#display").text("" + temp + ".");
 	console.log(parseFloat(temp));
 	decimalClick = true;
- 	
-
-	$("#zero").on("click", function() {
-		zero++;
-		console.log(zero);
-		if (zero===1) {
-		$("#display").text(temp + ".0");
-	} else if (zero > 1) {
-			$("#display").append("0");
-		}
-	});
-
 });
+
 
 $("#percent").click(function() {
 	percentClick = true;
@@ -138,7 +126,7 @@ $("#subtract").click(function() {
 	zero = 0;
 	SubtractClicked = true;
 	decimalClick = false;
-
+	n = 0;
 	if (result===0) {
 		firstNumber += temp;
 		result = firstNumber;
@@ -157,6 +145,7 @@ $("#subtract").click(function() {
 
 $("#multiply").click(function() {
 	zero = 0;
+	n = 0;
 	MultiplyClicked = true;
 	decimalClick = false;
 	if (result===0) {
@@ -175,6 +164,7 @@ $("#multiply").click(function() {
 
 $("#divide").click(function() {
 	zero = 0;
+	n = 0;
 	DivideClicked = true;
 	decimalClick = false;
 
