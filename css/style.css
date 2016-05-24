@@ -17,7 +17,8 @@
   border: #979797 2px solid; }
 
 #display {
-  padding: 15px 0;
+  width: 197px;
+  height: 45px;
   margin: 10px;
   opacity: 0.67;
   background: #D8D8D8;
@@ -27,6 +28,9 @@
   font-size: 20px;
   font-family: Eurostile;
   position: relative; }
+  #display p {
+    padding: 0px 5px;
+    float: right; }
 
 #contain {
   width: 156px;
