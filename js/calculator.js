@@ -16,7 +16,12 @@ var numberClick = false;
 
 var firstNumber= 0;
 
+var subtract = 0;
+
 var n=0;
+
+var difference = 0;
+
 
 $(".number").click(function() {
 	$("#clear").text("C");
@@ -24,7 +29,7 @@ $(".number").click(function() {
 	temp = (temp * 10);
 	temp += parseFloat($(this).val());
 	console.log(temp);
-	$("#display").text(temp);
+	$("#display p").text(temp);
 } else {
 	console.log(n);
 	console.log(decimalClick);
@@ -36,7 +41,7 @@ $(".number").click(function() {
 	temp += ($(this).val()/Math.pow(10,n));
 	console.log(result);
 	console.log(temp);
-	$("#display").text(temp);
+	$("#display p").text(temp);
 }
 
 
@@ -46,19 +51,20 @@ $("#clear").click(function() {
 	$("#clear").text("AC");
 	temp = 0;
 	result = 0;
+	subtract = 0;
 	decimalClick = false;
 	DivideClicked = false;
 	SubtractClicked = false;
 	addClicked = false;
 	MultiplyClicked = false;
 	numberClick = false;
-	$("#display").text(temp);
+	$("#display p").text(temp);
 });
 
 //Display a zero every time it is clicked, while decimalClick is true.
 
 $("#dot").click(function() {
-	$("#display").text(temp + ".");
+	$("#display p").text(temp + ".");
 	console.log(parseFloat(temp));
 	decimalClick = true;
 });
@@ -68,13 +74,13 @@ $("#percent").click(function() {
 	percentClick = true;
 	temp/=100;
 	console.log(temp);
-	$("#display").text(temp);
+	$("#display p").text(temp);
 });
 
 $("#plusminus").click(function() {
 	temp+= -(temp*2);
 	console.log(temp);
-	$("#display").text(temp);
+	$("#display p").text(temp);
 });
 
 
@@ -92,7 +98,7 @@ $("#equal").click(function() {
 		result -= temp;
 	}
 	console.log(result);
-	$("#display").text(result);
+	$("#display p").text(result);
 	console.log(result);
 	temp = result;
 	result = 0;
@@ -117,28 +123,57 @@ $("#add").click(function() {
 	result += temp;
 	console.log(result);
 	temp=0;
-	$("#display").text(result);
+	$("#display p").text(result);
 });
 
 $("#subtract").click(function() {
-	zero = 0;
 	SubtractClicked = true;
 	decimalClick = false;
-	n = 0;
-	if (result===0) {
-		firstNumber += temp;
-		result = firstNumber;
-		firstNumber = 0;
-		temp = 0;
-	} else {
-		result -= temp;
+	subtract++;
+	console.log(subtract);
+	console.log(result);
+	console.log(temp);
+
+	if (result===0&&subtract===2) {
+		difference -= temp;
+		console.log(difference);
+		$("#display p").text(difference);
+	}
+
+	if (result===0&&subtract>2) {
+		difference -= temp;
+		console.log(difference);
+		$("#display p").text(difference);
 	}
 
 
 
 
-	$("#display").text(result);
-	console.log(result);
+
+
+	if (result!==0) {
+		result -= temp;
+		console.log(result);
+		$("#display p").text(result);
+	}
+
+	
+
+	if (result===0&&subtract===1) {
+		result += temp;
+		console.log(result);
+	}
+
+
+	temp = 0;
+
+	if (MultiplyClicked===true) {
+		difference -= temp;
+		console.log(difference);
+	}
+
+
+
 });
 
 $("#multiply").click(function() {
@@ -151,7 +186,7 @@ $("#multiply").click(function() {
 	temp = 0;
 	} else {
 		result*=temp;
-		$("#display").text(result);
+		$("#display p").text(result);
 	}
 
 
@@ -171,7 +206,7 @@ $("#divide").click(function() {
 	temp = 0;
 	} else {
 		result/=temp;
-		$("#display").text(result);
+		$("#display p").text(result);
 	}
 
 
@@ -179,5 +214,6 @@ $("#divide").click(function() {
 	temp = 0;
 
 	});
+
 
 
