@@ -192,7 +192,10 @@ $("#multiply").click(function() {
 		$("#display p").text(result);
 	}
 
-
+	if (subtract===1) {
+		difference -= temp;
+		console.log(difference);
+	}
 
 	console.log(result);
 	temp = 0;
