@@ -22,6 +22,8 @@ var n=0;
 
 var difference = 0;
 
+var problem = [];
+
 
 $(".number").click(function() {
 	$("#clear").text("C");
@@ -58,6 +60,7 @@ $("#clear").click(function() {
 	addClicked = false;
 	MultiplyClicked = false;
 	numberClick = false;
+	problem = [''];
 	$("#display p").text(temp);
 });
 
@@ -85,19 +88,55 @@ $("#plusminus").click(function() {
 
 
 $("#equal").click(function() {
+
+	if (problem.length > 3) {
+		problem.push(temp);
+		console.log(problem);
+		addClicked = false;
+		MultiplyClicked = false;
+		DivideClicked = false;
+		SubtractClicked = false;
+		operation = problem.join("");
+		console.log(operation);
+		console.log(eval(operation));
+		result = eval(operation);
+		console.log(result);
+		problem = [];
+		problem.push(result);
+	}
+
 	if (addClicked===true) {
 		result += temp;
+		console.log(result);
+		temp = 0;
+		problem = [];
+		problem.push(result);
+		console.log(problem);
 	}
 	if (MultiplyClicked === true) {
 		result *= temp;
+		console.log(result);
+		temp = 0;
+		problem = [];
+		problem.push(result);
+		console.log(problem);
 	}
 	if (DivideClicked === true) {
 		result /= temp;
+		temp = 0;
+		problem = [];
+		problem.push(result);
+		console.log(problem);
 	}
 	if (SubtractClicked === true) {
 		result -= temp;
+		temp = 0;
+		problem = [];
+		problem.push(result);
+		console.log(problem);
 	}
-	console.log(result);
+
+	
 	$("#display p").text(result);
 	console.log(result);
 	temp = result;
@@ -117,13 +156,15 @@ $("#add").click(function() {
 	zero = 0;
 	addClicked = true;
 	decimalClick = false;
-	console.log(n);
 	n = 0;
-	console.log(n);
 	result += temp;
 	console.log(result);
+	problem.push(temp);
+	problem.push("+");
+	console.log(problem);
 	temp=0;
-	$("#display p").text(result);
+
+	
 });
 
 $("#subtract").click(function() {
@@ -133,6 +174,8 @@ $("#subtract").click(function() {
 	console.log(subtract);
 	console.log(result);
 	console.log(temp);
+	problem.push(temp);
+	problem.push("-");
 
 	if (result===0&&subtract===2) {
 		difference -= temp;
@@ -181,13 +224,17 @@ $("#multiply").click(function() {
 	n = 0;
 	MultiplyClicked = true;
 	decimalClick = false;
+	problem.push(temp);
+	problem.push("*");
+	console.log(problem);
 	if (result===0) {
 	result += temp;
 	temp = 0;
-	} else {
-		result*=temp;
-		$("#display p").text(result);
-	}
+	} 
+	// else {
+	// // 	result*=temp;
+	// // 	$("#display p").text(result);
+	// // }
 
 
 
@@ -201,14 +248,17 @@ $("#divide").click(function() {
 	n = 0;
 	DivideClicked = true;
 	decimalClick = false;
+	problem.push(temp);
+	problem.push("/");
 
 	if (result===0) {
 	result += temp;
 	temp = 0;
-	} else {
-		result/=temp;
-		$("#display p").text(result);
-	}
+	} 
+	// else {
+	// 	result/=temp;
+	// 	$("#display p").text(result);
+	// }
 
 
 	console.log(result);
