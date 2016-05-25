@@ -191,6 +191,7 @@ $("#multiply").click(function() {
 
 
 
+
 	console.log(result);
 	temp = 0;
 });
