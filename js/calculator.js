@@ -1,4 +1,5 @@
 $(".number").click(function() {
+
 	$("#clear").text("C");
 if (decimalClick===false) {
 	temp = (temp * 10);
@@ -13,7 +14,7 @@ if (decimalClick===false) {
 }
 	temp += ($(this).val()/Math.pow(10,n));
 	console.log(temp);
-	$("#display p").text(temp);
+	display(temp);
 }	
 	
 });
