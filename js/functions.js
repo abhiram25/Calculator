@@ -107,27 +107,27 @@ function minus() {
 
 function equal() {
 	operation();
-	if (addClicked===true) {
+	if (addClicked) {
 		result += temp;
 		console.log(result);
 		temp = 0;
 		pushresult();
 		console.log(problem);
 	}
-	if (MultiplyClicked === true) {
+	if (MultiplyClicked) {
 		result *= temp;
 		console.log(result);
 		temp = 0;
 		pushresult();
 		console.log(problem);
 	}
-	if (DivideClicked === true) {
+	if (DivideClicked) {
 		result /= temp;
 		temp = 0;
 		pushresult();
 		console.log(problem);
 	}
-	if (SubtractClicked === true) {
+	if (SubtractClicked) {
 		result -= temp;
 		temp = 0;
 		pushresult();
