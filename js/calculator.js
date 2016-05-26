@@ -1,30 +1,3 @@
-var result = 0;
-
-var temp = 0;
-
-var addClicked = false;
-
-var SubtractClicked = false;
-
-var MultiplyClicked = false;
-
-var DivideClicked = false;
-
-var decimalClick = false;
-
-var numberClick = false;
-
-var firstNumber= 0;
-
-var subtract = 0;
-
-var n=0;
-
-var difference = 0;
-
-var problem = [];
-
-
 $(".number").click(function() {
 	$("#clear").text("C");
 if (decimalClick===false) {

@@ -1,3 +1,29 @@
+var result = 0;
+
+var temp = 0;
+
+var addClicked = false;
+
+var SubtractClicked = false;
+
+var MultiplyClicked = false;
+
+var DivideClicked = false;
+
+var decimalClick = false;
+
+var numberClick = false;
+
+var firstNumber= 0;
+
+var subtract = 0;
+
+var n=0;
+
+var difference = 0;
+
+var problem = [];
+
 function operation() {
 		if (problem.length > 3) {
 		problem.push(temp);
@@ -8,8 +34,6 @@ function operation() {
 		console.log(eval(operation));
 		result = eval(operation);
 		console.log(result);
-		problem = [];
-		problem.push(result);
 	}
 }
 
@@ -42,12 +66,9 @@ function add() {
 	decimalClick = false;
 	n = 0;
 	result += temp;
-	console.log(result);
 	pushToProblem("+")
 	console.log(problem);
 	temp=0;
-
-	display(result);
 }
 
 function minus() {
@@ -90,41 +111,32 @@ function equal() {
 		result += temp;
 		console.log(result);
 		temp = 0;
-		problem = [];
-		problem.push(result);
+		pushresult();
 		console.log(problem);
 	}
 	if (MultiplyClicked === true) {
 		result *= temp;
 		console.log(result);
 		temp = 0;
-		problem = [];
-		problem.push(result);
+		pushresult();
 		console.log(problem);
 	}
 	if (DivideClicked === true) {
 		result /= temp;
 		temp = 0;
-		problem = [];
-		problem.push(result);
+		pushresult();
 		console.log(problem);
 	}
 	if (SubtractClicked === true) {
 		result -= temp;
 		temp = 0;
-		problem = [];
-		problem.push(result);
+		pushresult();
 		console.log(problem);
 	}
-
-	
 	display(result);
 	console.log(result);
 	temp = result;
-	result = 0;
-
 	falsify();
-
 }
 
 function falsify() {
@@ -180,5 +192,10 @@ function pushToProblem(operation) {
 	problem.push(temp);
 	problem.push(operation);
 }
+
+function pushresult() {
+	problem = [];
+	problem.push(result);
+	}
 
 
