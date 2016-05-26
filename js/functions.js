@@ -2,10 +2,7 @@ function operation() {
 		if (problem.length > 3) {
 		problem.push(temp);
 		console.log(problem);
-		addClicked = false;
-		MultiplyClicked = false;
-		DivideClicked = false;
-		SubtractClicked = false;
+		falsify();
 		operation = problem.join("");
 		console.log(operation);
 		console.log(eval(operation));
@@ -88,9 +85,7 @@ function minus() {
 }
 
 function equal() {
-
 	operation();
-
 	if (addClicked===true) {
 		result += temp;
 		console.log(result);

@@ -68,7 +68,7 @@ $("#plusminus").click(function() {
 
 $("#equal").click(function() {
 	equal();
-}
+});
 
 $("#add").click(function() {
  	add();
