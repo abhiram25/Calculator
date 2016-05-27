@@ -24,18 +24,8 @@ var difference = 0;
 
 var problem = [];
 
-function operation() {
-                if (problem.length > 3) {
-                problem.push(temp);
-                console.log(problem);
-                falsify();
-                operation = problem.join("");
-                console.log(operation);
-                console.log(eval(operation));
-                result = eval(operation);
-                console.log(result);
-        }
-}
+// function operation() {
+// }
 
 function multiply() {
         zero = 0;
@@ -65,7 +55,7 @@ function add() {
         addClicked = true;
         decimalClick = false;
         n = 0;
-        result += temp;
+        result = temp;
         pushToProblem("+")
         console.log(problem);
         temp=0;
@@ -106,8 +96,22 @@ function minus() {
 }
 
 function equal() {
-        operation();
+        // operation();
+        if (problem.length > 3) {
+                problem.push(temp);
+                console.log(problem);
+                falsify();
+                operation = problem.join("");
+                console.log(operation);
+                console.log(eval(operation));
+                result = eval(operation);
+                console.log(result);
+                problem = [];
+                console.log(problem);
+        }
+
         if (addClicked) {
+                console.log(temp);
                 result += temp;
                 console.log(result);
                 temp = 0;
