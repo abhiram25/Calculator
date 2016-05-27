@@ -51,11 +51,11 @@ $keys-border: 1px solid #979797;
 
 
 	#calculator {
-	@include background(linear-gradient(#2EB085, #00C4C4));
+	@include background(linear-gradient(#FFCC66, #FFCC66));
 	@include common(222px, 299px, 90px auto);
 	@include shadow(7px 5px 4px #000000);
 	border-radius: $radius;
-	border: #2EB085 2px solid;
+	border: #FFCC66 2px solid;
 
 }
 
