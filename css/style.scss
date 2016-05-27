@@ -49,14 +49,6 @@ $keys-border: 1px solid #979797;
 	margin-left: $margin-left;
 }
 
-#desk {
-	@include common(1000px, 410px, 60px auto);
-	background-image: url('../img/wood.jpg');
-	@include border(solid #000000 8px);
-	@include shadow(6px 6px 2px #000);
-	border-radius: $radius;
-
-}
 
 	#calculator {
 	@include background(linear-gradient(#2EB085, #00C4C4));
@@ -109,16 +101,6 @@ $keys-border: 1px solid #979797;
 	  }
 
 
-#Notebook {
-  float: right;
-  margin-top: 260px;
-  margin-right: 150px;
-}
-
-#Note {
-  height: 135.5px;
-  width: 156.5px;
- }
 
 button {
 	outline: none;
