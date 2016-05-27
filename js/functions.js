@@ -57,7 +57,7 @@ function add() {
         decimalClick = false;
         n = 0;
         result = temp;
-        pushToProblem("+")
+        pushToProblem("+");
         console.log(problem);
         temp=0;
 }
