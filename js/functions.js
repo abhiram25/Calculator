@@ -108,7 +108,6 @@ function equal() {
                 result = eval(operation);
                 console.log(result);
                 problem = [];
-                problem.push(result);
                 console.log(problem);
         }
 
