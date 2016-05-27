@@ -74,7 +74,8 @@ function minus() {
         if (result===0&&subtract===2) {
                 difference -= temp;
                 console.log(difference);
-                $("#display p").text(difference);
+                result = difference;
+                $("#display p").text(result);
         }
 
         if (result===0&&subtract>2) {
@@ -85,6 +86,7 @@ function minus() {
         if (result!==0) {
                 result -= temp;
                 console.log(result);
+                $("#display p").text(result);
         }
 
 
@@ -172,7 +174,7 @@ function minus() {
 		console.log(result);
 	}
 
-	if (result===0&&subtract>=1) {
+	if (result===0&&subtract===1) {
 		result += temp;
 		console.log(result);
 	}
