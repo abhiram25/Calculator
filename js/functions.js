@@ -217,6 +217,7 @@ function clear() {
         subtract = 0;
         falsify();
         problem = [''];
+        difference = 0;
         display(temp);
 }
 
