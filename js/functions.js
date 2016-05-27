@@ -39,6 +39,7 @@ function multiply() {
         temp = 0;
 }
 
+
 function divide() {
         zero = 0;
         n = 0;
@@ -143,6 +144,42 @@ function equal() {
         falsify();
 }
 
+function minus() {
+	SubtractClicked = true;
+	decimalClick = false;
+	subtract++;
+	n=0;
+	console.log(subtract);
+	console.log(result);
+	console.log(temp);
+	pushToProblem("-")
+
+	if (result===0&&subtract===2) {
+		difference -= temp;
+		console.log(difference);
+		$("#display p").text(difference);
+	}
+
+	if (result===0&&subtract>2) {
+		difference -= temp;
+		console.log(difference);
+		$("#display p").text(difference);
+	}
+	if (result!==0) {
+		result -= temp;
+		console.log(result);
+	}
+
+	
+
+	if (result===0&&subtract===1) {
+		result += temp;
+		console.log(result);
+	}
+	temp = 0;
+}
+
+
 function falsify() {
         addClicked = false;
         NumberClicked = false;
@@ -201,3 +238,4 @@ function pushresult() {
         problem = [];
         problem.push(result);
         }
+
