@@ -108,6 +108,7 @@ function equal() {
                 result = eval(operation);
                 console.log(result);
                 problem = [];
+                problem.push(result);
                 console.log(problem);
         }
 
@@ -166,13 +167,13 @@ function minus() {
 		$("#display p").text(difference);
 	}
 	if (result!==0) {
+                console.log(result);
+                console.log(temp);
 		result -= temp;
 		console.log(result);
 	}
 
-	
-
-	if (result===0&&subtract===1) {
+	if (result===0&&subtract>=1) {
 		result += temp;
 		console.log(result);
 	}
