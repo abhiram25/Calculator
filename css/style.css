@@ -8,13 +8,13 @@
   border-radius: 10px; }
 
 #calculator {
-  background: linear-gradient(#FFA5A5, #FFFFFF);
+  background: linear-gradient(#2EB085, #00C4C4);
   width: 222px;
   height: 299px;
   margin: 90px auto;
   box-shadow: 7px 5px 4px #000000;
   border-radius: 10px;
-  border: #979797 2px solid; }
+  border: #2EB085 2px solid; }
 
 #display {
   width: 197px;
