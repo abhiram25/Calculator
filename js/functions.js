@@ -100,7 +100,7 @@ function minus() {
 
 function equal() {
         // operation();
-        if (problem.length > 3) {
+        // if (problem.length > 3) {
                 problem.push(temp);
                 console.log(problem);
                 falsify();
@@ -111,35 +111,35 @@ function equal() {
                 console.log(result);
                 problem = [];
                 console.log(problem);
-        }
+        // }
 
-        if (addClicked) {
-                console.log(temp);
-                result += temp;
-                console.log(result);
-                temp = 0;
-                pushresult();
-                console.log(problem);
-        }
-        if (MultiplyClicked) {
-                result *= temp;
-                console.log(result);
-                temp = 0;
-                pushresult();
-                console.log(problem);
-        }
-        if (DivideClicked) {
-                result /= temp;
-                temp = 0;
-                pushresult();
-                console.log(problem);
-        }
-        if (SubtractClicked) {
-                result -= temp;
-                temp = 0;
-                pushresult();
-                console.log(problem);
-        }
+        // if (addClicked) {
+        //         console.log(temp);
+        //         result += temp;
+        //         console.log(result);
+        //         temp = 0;
+        //         pushresult();
+        //         console.log(problem);
+        // }
+        // if (MultiplyClicked) {
+        //         result *= temp;
+        //         console.log(result);
+        //         temp = 0;
+        //         pushresult();
+        //         console.log(problem);
+        // }
+        // if (DivideClicked) {
+        //         result /= temp;
+        //         temp = 0;
+        //         pushresult();
+        //         console.log(problem);
+        // }
+        // if (SubtractClicked) {
+        //         result -= temp;
+        //         temp = 0;
+        //         pushresult();
+        //         console.log(problem);
+        // }
         display(result);
         console.log(result);
         temp = result;
