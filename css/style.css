@@ -3,19 +3,17 @@
   width: 222px;
   height: 299px;
   margin: 90px auto;
-  box-shadow: 7px 5px 4px #000000;
+  box-shadow: 1px 5px 4px #000000;
   border-radius: 10px;
   border: #2EB085 2px solid; }
 
 #display {
-  width: 197px;
+  width: 199px;
   height: 45px;
   margin: 10px;
   opacity: 0.67;
   background: #D8D8D8;
-  border: #979797 2px solid;
-  box-shadow: 1px 1px 1px #000000;
-  box-shadow: inset 1px 1px 4px #000000;
+  box-shadow: inset 1px 2px 3px #000000;
   font-size: 20px;
   font-family: Eurostile;
   position: relative; }
