@@ -51,21 +51,18 @@ $keys-border: 1px solid #979797;
 
 
 	#calculator {
-	@include background(linear-gradient(#2EB085, #00C4C4));
-	@include common(222px, 299px, 90px auto);
-	@include shadow(7px 5px 4px #000000);
+	@include background(linear-gradient(#FFCC66, #FFCC66));
+	@include common(222px, 299px, 70px auto);
+	@include shadow(1px 5px 2px #000000);
 	border-radius: $radius;
-	border: #2EB085 2px solid;
-
+	border: #FFCC66 2px solid;
 }
-
 	#display {
-	@include common(197px, 45px, $radius);
+	@include common(199px, 45px, $radius);
 	opacity: 0.67;
 	@include background($background);
-	@include border($commonBorder);
-	@include shadow(1px 1px 1px #000000);
-	@include shadow(inset 1px 1px 4px #000000);
+	border: #FFCC66;
+	@include shadow(inset 1px 1px 2px #000000);
 	@include font(20px);
 	position: relative;
 
@@ -105,3 +102,18 @@ $keys-border: 1px solid #979797;
 button {
 	outline: none;
 }
+
+#color-picker {
+	margin: 0 auto;
+	max-width: 185px;
+	min-height: 200px;
+	.colors {
+	@include common(50px, 50px, null); 
+	border: 2px solid #222;
+	border-radius: 100%;
+	margin: 0 auto;
+	float: left;
+	margin-left: 7px;
+}
+}
+
