@@ -63,7 +63,7 @@ $keys-border: 1px solid #979797;
 	@include common(197px, 45px, $radius);
 	opacity: 0.67;
 	@include background($background);
-	@include border($commonBorder);
+	border: #FFCC66;
 	@include shadow(1px 1px 1px #000000);
 	@include shadow(inset 1px 1px 4px #000000);
 	@include font(20px);
