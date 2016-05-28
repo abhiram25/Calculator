@@ -1,11 +1,11 @@
 #calculator {
-  background: linear-gradient(#2EB085, #00C4C4);
+  background: linear-gradient(#4D166E, #4D166E);
   width: 222px;
   height: 299px;
   margin: 90px auto;
   box-shadow: 7px 5px 4px #000000;
   border-radius: 10px;
-  border: #2EB085 2px solid; }
+  border: #4D166E 2px solid; }
 
 #display {
   width: 197px;
@@ -13,7 +13,7 @@
   margin: 10px;
   opacity: 0.67;
   background: #D8D8D8;
-  border: #979797 2px solid;
+  border: #4D166E;
   box-shadow: 1px 1px 1px #000000;
   box-shadow: inset 1px 1px 4px #000000;
   font-size: 20px;
