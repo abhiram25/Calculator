@@ -64,7 +64,12 @@ $("#equal").click(function() {
 	equal();
  });
 
-
+  $(".colors").click(function() {
+  	    var background = $(this).css("background");
+        var border = $(this).css("border");
+        $(".current").css("background",background);
+        $(".current").css("border",border);
+  });
 
 
 
