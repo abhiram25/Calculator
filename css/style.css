@@ -1,11 +1,9 @@
 #calculator {
-  background: linear-gradient(#FFCC66, #FFCC66);
   width: 222px;
   height: 299px;
   margin: 70px auto;
   box-shadow: 1px 5px 2px #000000;
-  border-radius: 10px;
-  border: #FFCC66 2px solid; }
+  border-radius: 10px; }
 
 #display {
   width: 199px;
@@ -64,10 +62,55 @@ button {
   #color-picker .colors {
     width: 50px;
     height: 50px;
-    border: 2px solid #222;
     border-radius: 100%;
-    margin: 0 auto;
+    margin: 4px auto;
     float: left;
     margin-left: 7px; }
+
+h2 {
+  text-align: center;
+  font-family: arial;
+  font-weight: normal;
+  font-size: 36px; }
+
+.gold {
+  background: linear-gradient(#FFCC66, #FFCC66);
+  border: #FFCC66 2px solid; }
+
+.current {
+  background: linear-gradient(#FFCC66, #FFCC66);
+  border: #FFCC66 2px solid; }
+
+.ocean {
+  background: linear-gradient(#007587, #20B3C9);
+  border: #20B3C9 2px solid; }
+
+.orange {
+  background: linear-gradient(#E67A00, #E67A00);
+  border: #E67A00 2px solid; }
+
+.red {
+  background: linear-gradient(#A31300, #C71700);
+  border: #A31300 2px solid; }
+
+.pink {
+  background: linear-gradient(#C20071, #C20071);
+  border: #C20071 2px solid; }
+
+.glow {
+  background: linear-gradient(#88FCBB, #88FCBB);
+  border: #88FCBB 2px solid; }
+
+.silver {
+  background: linear-gradient(#DBDBDB, #DBDBDB);
+  border: #DBDBDB 2px solid; }
+
+.green {
+  background: linear-gradient(#009C43, #009C43);
+  border: #009C43 2px solid; }
+
+.indigo {
+  background: linear-gradient(#2D1963, #2D1963);
+  border: #2D1963 2px solid; }
 
 /*# sourceMappingURL=style.css.map */
