@@ -245,8 +245,6 @@ function pushresult() {
         problem.push(result);
         }
 
-// function changeColor() {
-//    console.log($(this).data());
-// }
+
 
 
