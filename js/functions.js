@@ -69,7 +69,7 @@ function minus() {
         console.log(subtract);
         console.log(result);
         console.log(temp);
-        pushToProblem("-")
+        pushToProblem("-");
 
         if (result===0&&subtract===2) {
                 difference -= temp;
@@ -192,7 +192,8 @@ function falsify() {
 }
 
 function changeSigns() {
-        temp+= -(temp*2);
+
+        temp+= -(temp*2);    
         console.log(temp);
         display(temp);
 }
@@ -219,6 +220,8 @@ function clear() {
         problem = [''];
         difference = 0;
         display(temp);
+        decimalClick = false;
+        n=0;
 }
 
 function display(content) {
